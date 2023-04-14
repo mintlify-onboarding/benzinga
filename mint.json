@@ -1,5 +1,4 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
   "name": "Benzinga",
   "logo": {
     "dark": "/logo/dark.png",
@@ -15,34 +14,20 @@
     "name": "Get Started",
     "url": "https://www.benzinga.com/apis/data/"
   },
-  "anchors": [
-    {
-      "name": "API Reference",
-      "icon": "rectangle-terminal",
-      "url": "api-reference"
-    },
-    {
-      "name": "Blog", 
-      "icon": "pencil", 
-      "url": "https://www.benzinga.com/apis/blog/"
-    }
-  ],
+  "api": {
+    "baseUrl": "https://api.benzinga.com/api/v2"
+  },
   "navigation": [
     {
-      "group": "Home",
-      "pages": ["Introduction", "features"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
-    },
-    {
-      "group": "Endpoint Examples",
+      "group": "API reference",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        {
+          "group": "News",
+          "pages": [
+            "api-reference/news/newsService-get",
+            "api-reference/news/newsServiceRemoved-get"
+          ]
+        }
       ]
     }
   ],
