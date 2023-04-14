@@ -97,13 +97,13 @@ paths:
             Allows control of results sorting.  Default is created, DESC.
              
             Sort Fields
-              * id
-              * created
-              * updated
+              * id
+              * created
+              * updated
              
             Sort Order Direction
-              * asc (ascending)
-              * desc (descending)
+              * asc (ascending)
+              * desc (descending)
           enum:
             - id:asc
             - id:desc
@@ -237,7 +237,7 @@ definitions:
           will not change. The date format standard used is RFC 2822 / RFC 1123.
         format: "Wed, 17 May 2017 14:20:15 -0400"
       updated:
-        - $ref: "#/definitions/updated"
+          $ref: "#/definitions/updated"
       title:
         type: string
         description: The headline of the article. This will only be plain text.
@@ -319,7 +319,7 @@ definitions:
         type: integer
         description: id of removed news content
       updated:
-        - $ref: "#/definitions/updated"
+          $ref: "#/definitions/updated"
   updated:
     type: string
     description: >-

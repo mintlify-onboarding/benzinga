@@ -19,6 +19,10 @@
   },
   "navigation": [
     {
+      "group": "Benzinga APIs", 
+      "pages": ["benzinga-apis/newsfeed-v2"]
+    },
+    {
       "group": "API reference",
       "pages": [
         {
