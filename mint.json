@@ -11,8 +11,8 @@
     "dark": "#036192"
   },
   "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://www.benzinga.com/apis/data/"
+    "name": "Free Trial",
+    "url": "https://www.benzinga.com/apis/request-trial/?utm_source=Benzinga_Docs&utm_campaign=Free_Trial"
   },
   "api": {
     "baseUrl": "https://api.benzinga.com/api/v2"
@@ -30,6 +30,7 @@
           "pages": [
             "api-reference/news/newsService-get",
             "api-reference/news/newsServiceRemoved-get"
+            
           ]
         }
       ]
