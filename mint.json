@@ -17,7 +17,18 @@
   "api": {
     "baseUrl": "https://api.benzinga.com/api/v2"
   },
+  "anchors": [
+    {
+      "name": "Github", 
+      "icon": "github",
+      "url": "https://github.com/benzinga"
+    }
+  ],
   "navigation": [
+    {
+      "group": "Getting Started", 
+      "pages": ["getting-started/introduction", "getting-started/contact"]
+    },
     {
       "group": "Benzinga APIs", 
       "pages": ["benzinga-apis/newsfeed-v2"]
@@ -39,6 +50,7 @@
   "footerSocials": {
     "twitter": "https://www.benzinga.com/apis/#",
     "facebook": "https://www.benzinga.com/apis/#",
-    "website": "https://www.benzinga.com/apis/"
+    "website": "https://www.benzinga.com/apis/",
+    "github": "https://github.com/benzinga"
   }
 }
