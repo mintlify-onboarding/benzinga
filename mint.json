@@ -26,8 +26,11 @@
   ],
   "navigation": [
     {
-      "group": "Getting Started", 
-      "pages": ["getting-started/introduction", "getting-started/contact"]
+      "group": "",
+      "pages": [
+        "home",
+        "python-client"
+      ]
     },
     {
       "group": "Benzinga APIs", 
