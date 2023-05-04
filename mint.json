@@ -64,6 +64,14 @@
             "benzinga-apis/calendar/get-firms"
           ]
         },
+        {
+          "group": "Delayed Quote", 
+          "pages": [
+            "benzinga-apis/delayed-quote/delayed-quote-v1",
+            "benzinga-apis/delayed-quote/models",
+            "benzinga-apis/delayed-quote/get-quoteDelayed"
+          ]
+        },
         "benzinga-apis/newsfeed-v2"]
     },
     {
