@@ -1,0 +1,108 @@
+---
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Historical Bar Data
+  description: Benzinga Historical Bar Rest API
+host: api.benzinga.com
+basePath: /api/v2
+schemes:
+  - https
+  - http
+security:
+  - token: []
+securityDefinitions:
+  token:
+    type: apiKey
+    name: token
+    in: query
+paths:
+  /bars:
+    get:
+      summary: Get the delayed quotes.
+      parameters:
+        - name: accept
+          in: header
+          type: string
+          description: Specify return format.
+          enum:
+            - application/json
+            - application/xml (deprecated)
+          default: application/json
+        - name: symbols
+          in: query
+          type: string
+          format: csv
+          description: >-
+            One or more comma separated symbols to specify companies to get data
+            for.
+        - name: from
+          in: query
+          type: string
+          format: YYYY-MM-DD, or any of YTD, iMONTH, iM, iD
+          description: >-
+            Date to query from point in time. Sorted by published date.
+            If "YTD" Sets from to the first trading day of the current year. 
+            Some other valid values: "1MONTH", "1m", "1M" (all meaning "1 month 
+            from today"), "1d", "1D" (both meaning "1 day from today").
+        - name: to
+          in: query
+          type: string
+          format: YYYY-MM-DD, or any of iMONTH, iW, iD, iH, iM
+          description: Date to query to point in time. Sorted by published date.
+        - name: interval
+          in: query
+          type: string
+          description:  >-
+            The candle intervals to use, i.e., 5 minute bars, daily bars, etc.
+            Some valid values: 1MONTH, 1W, 1D, 1H (1 hour), 2H, 3H, 4H, 5M (5 minutes), 10M, 15M, 30M.
+            Defaults to an appropriate value based on the period of data requested: i.e., 5 minutes bars if less than 5 days, daily bars if greater.
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/BarsResponse'
+definitions:
+  BarsResponse:
+    type: object
+    properties:
+      symbol:
+        type: string
+        description: The given symbol
+      interval:
+        type: number
+        description: The candle interval
+      candles:
+        type: array
+        description: An array of bar data / candles
+        items:
+          type: object
+          properties:
+            open:
+              type: number
+              format: float
+              description: Price at same day market open
+            high:
+              type: number
+              format: float
+              description: Indicator of highest price of security for same day
+            low:
+              type: number
+              format: float
+              description: Indicator of lowest price of security for same day
+            close:
+              type: number
+              format: float
+              description: Price at same day close. Only available after market close.
+            volume:
+              type: integer
+              description: Volume for the current or previous regular-only trading session
+            time:
+              type: integer
+              description: Unix timestamp in millis.
+            dateTime:
+              type: string
+              format: YYYY-MM-DDTHH:MM:SS.mmm-ZZ:zz
+              description: Datetime is aligned to the start or the candle, or to the start of the pre-market session if a daily.

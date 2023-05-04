@@ -1,0 +1,1853 @@
+---
+title: "Calendar API Models"
+---
+
+## analyst-ratings-analyst:object
+
+<ResponseField name="id" type="string">
+Id of the analyst
+</ResponseField>
+
+<ResponseField name="firm_id" type="string">
+Id of the analyst firm
+</ResponseField>
+
+<ResponseField name="firm_name" type="string">
+Firm name of the analyst
+</ResponseField>
+
+<ResponseField name="name_first" type="string">
+Analyst first name
+</ResponseField>
+
+<ResponseField name="name_last" type="string">
+Analyst last name 
+</ResponseField>
+
+<ResponseField name="name_full" type="string">
+Analyst full name for display
+</ResponseField>
+
+<ResponseField name="ratings_accuracy" type="object">
+Analyst accuracy scores
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.smart_score" type="string (double)">
+A weighted average of the total_ratings_percentile, overall_avg_return_percentile, and overall_success_rate
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_success_rate" type="string (double)">
+The percentile of this analyst’s overall average return per rating in comparison to other analysts' overall average returns per rating
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.total_ratings_percentile" type="string (double)">
+The percentile of this analyst’s overall average return per rating in comparison to other analysts' overall average returns per rating
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.total_ratings" type="integer (int64)">
+Number of recommendations made by this analyst
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_gain_count" type="integer (int64)">
+The number of ratings that have gained value since the date of recommendation
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_loss_count" type="integer (int64)">
+The number of ratings that have lost value since the date of recommendation
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_average_return" type="string (double)">
+The average percent price difference per rating since the date of recommendation
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings since the date of recommendation
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1m_gain_count" type="string (double)">
+The number of ratings that have gained value over the last month
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1m_loss_count" type="string (double)">
+The number of ratings that have lost value over the last month
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1m_average_return" type="string (double)">
+The average percent price difference per rating over the last month
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1m_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last month
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3m_gain_count" type="string (double)">
+The number of ratings that have gained value over the last three months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3m_loss_count" type="string (double)">
+The number of ratings that have lost value over the last three months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3m_average_return" type="string (double)">
+The average percent price difference per rating over the last three months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3m_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last three months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.9m_gain_count" type="string (double)">
+The number of ratings that have gained value over the last nine months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.9m_loss_count" type="string (double)">
+The number of ratings that have lost value over the last nine months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.9m_average_return" type="string (double)">
+The average percent price difference per rating over the last nine months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.9m_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last nine months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1y_gain_count" type="string (double)">
+The number of ratings that have gained value over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1y_loss_count" type="string (double)">
+The number of ratings that have lost value over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1y_average_return" type="string (double)">
+The average percent price difference per rating over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1y_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.2y_gain_count" type="string (double)">
+The number of ratings that have gained value over the last two years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.2y_loss_count" type="string (double)">
+The number of ratings that have lost value over the last two years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.2y_average_return" type="string (double)">
+The average percent price difference per rating over the last two years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.2y_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last two yars
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3y_gain_count" type="string (double)">
+The number of ratings that have gained value over the last three years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3y_loss_count" type="string (double)">
+The number of ratings that have lost value over the last three years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3y_average_return" type="string (double)">
+The average percent price difference per rating over the last three years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3y_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last three years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.updated" type="integer (int64)">
+Last update timstamp in UTC Unix epoch timestamp (seconds)
+</ResponseField>
+
+<ResponseField name="updated" type="integer (int64)">
+Last update timstamp in UTC Unix epoch timestamp (seconds)
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "firm_id": "string",
+  "firm_name": "string",
+  "name_first": "string",
+  "name_last": "string",
+  "name_full": "string",
+  "ratings_accuracy": {
+    "smart_score": "string (double)",
+    "overall_success_rate": "string (double)",
+    "overall_avg_return_percentile": "string (double)",
+    "total_ratings_percentile": "string (double)",
+    "total_ratings": "integer (int64)",
+    "overall_gain_count": "integer (int64)",
+    "overall_loss_count": "integer (int64)",
+    "overall_average_return": "string (double)",
+    "overall_stdev": "string (double)",
+    "1m_gain_count": "string (double)",
+    "1m_loss_count": "string (double)",
+    "1m_average_return": "string (double)",
+    "1m_stdev": "string (double)",
+    "3m_gain_count": "string (double)",
+    "3m_loss_count": "string (double)",
+    "3m_average_return": "string (double)",
+    "3m_stdev": "string (double)",
+    "9m_gain_count": "string (double)",
+    "9m_loss_count": "string (double)",
+    "9m_average_return": "string (double)",
+    "9m_stdev": "string (double)",
+    "1y_gain_count": "string (double)",
+    "1y_loss_count": "string (double)",
+    "1y_average_return": "string (double)",
+    "1y_stdev": "string (double)",
+    "2y_gain_count": "string (double)",
+    "2y_loss_count": "string (double)",
+    "2y_average_return": "string (double)",
+    "2y_stdev": "string (double)",
+    "3y_gain_count": "string (double)",
+    "3y_loss_count": "string (double)",
+    "3y_average_return": "string (double)",
+    "3y_stdev": "string (double)",
+    "updated": "integer (int64)"
+  },
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## ratings_accuracy: object
+Analyst accuracy scores
+
+<ResponseField name="smart_score" type="string (double)">
+A weighted average of the total_ratings_percentile, overall_avg_return_percentile, and overall_success_rate
+</ResponseField>
+
+<ResponseField name="overall_success_rate" type="string (double)">
+The percentage of gain/loss ratings that resulted in a gain overall
+</ResponseField>
+
+<ResponseField name="overall_avg_return_percentile" type="string (double)">
+The percentile of this analyst’s overall average return per rating in comparison to other analysts' overall average returns per rating
+</ResponseField>
+
+<ResponseField name="total_ratings_percentile" type="string (double)">
+The percentile of this analyst’s total number of ratings in comparison to the total number of ratings published by all other analysts
+</ResponseField>
+
+<ResponseField name="total_ratings" type="integer (int64)">
+Number of recommendations made by this analyst
+</ResponseField>
+
+<ResponseField name="overall_gain_count" type="integer (int64)">
+The number of ratings that have gained value since the date of recommendation
+</ResponseField>
+
+<ResponseField name="overall_loss_count" type="integer (int64)">
+The number of ratings that have lost value since the date of recommendation
+</ResponseField>
+
+<ResponseField name="overall_average_return" type="string (double)">
+The average percent price difference per rating since the date of recommendation
+</ResponseField>
+
+<ResponseField name="overall_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings since the date of recommendation
+</ResponseField>
+
+<ResponseField name="1m_gain_count" type="string (double)">
+The number of ratings that have gained value over the last month
+</ResponseField>
+
+<ResponseField name="1m_loss_count" type="string (double)">
+The number of ratings that have lost value over the last month
+</ResponseField>
+
+<ResponseField name="1m_average_return" type="string (double)">
+The average percent price difference per rating over the last month
+</ResponseField>
+
+<ResponseField name="1m_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last month
+</ResponseField>
+
+<ResponseField name="3m_gain_count" type="string (double)">
+The number of ratings that have gained value over the last three months
+</ResponseField>
+
+<ResponseField name="3m_loss_count" type="string (double)">
+The number of ratings that have lost value over the last three months
+</ResponseField>
+
+<ResponseField name="3m_average_return" type="string (double)">
+The average percent price difference per rating over the last three months
+</ResponseField>
+
+<ResponseField name="3m_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last three months
+</ResponseField>
+
+<ResponseField name="9m_gain_count" type="string (double)">
+The number of ratings that have gained value over the last nine months
+</ResponseField>
+
+<ResponseField name="9m_loss_count" type="string (double)">
+The number of ratings that have lost value over the last nine months
+</ResponseField>
+
+<ResponseField name="9m_average_return" type="string (double)">
+The average percent price difference per rating over the last nine months
+</ResponseField>
+
+<ResponseField name="9m_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last nine months
+</ResponseField>
+
+<ResponseField name="1y_gain_count" type="string (double)">
+The number of ratings that have gained value over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="1y_loss_count" type="string (double)">
+The number of ratings that have lost value over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="1y_average_return" type="string (double)">
+The average percent price difference per rating over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="1y_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="2y_gain_count" type="string (double)">
+The number of ratings that have gained value over the last two years
+</ResponseField>
+
+<ResponseField name="2y_loss_count" type="string (double)">
+The number of ratings that have lost value over the last two years
+</ResponseField>
+
+<ResponseField name="2y_average_return" type="string (double)">
+The average percent price difference per rating over the last two years
+</ResponseField>
+
+<ResponseField name="2y_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last two yars
+</ResponseField>
+
+<ResponseField name="3y_gain_count" type="string (double)">
+The number of ratings that have gained value over the last three years
+</ResponseField>
+
+<ResponseField name="3y_loss_count" type="string (double)">
+The number of ratings that have lost value over the last three years
+</ResponseField>
+
+<ResponseField name="3y_average_return" type="string (double)">
+The average percent price difference per rating over the last three years
+</ResponseField>
+
+<ResponseField name="3y_stdev" type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last three years
+</ResponseField>
+
+<ResponseField name="updated" type="integer (int64)">
+Last update timstamp in UTC Unix epoch timestamp (seconds)
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "smart_score": "string (double)",
+  "overall_success_rate": "string (double)",
+  "overall_avg_return_percentile": "string (double)",
+  "total_ratings_percentile": "string (double)",
+  "total_ratings": "integer (int64)",
+  "overall_gain_count": "integer (int64)",
+  "overall_loss_count": "integer (int64)",
+  "overall_average_return": "string (double)",
+  "overall_stdev": "string (double)",
+  "1m_gain_count": "string (double)",
+  "1m_loss_count": "string (double)",
+  "1m_average_return": "string (double)",
+  "1m_stdev": "string (double)",
+  "3m_gain_count": "string (double)",
+  "3m_loss_count": "string (double)",
+  "3m_average_return": "string (double)",
+  "3m_stdev": "string (double)",
+  "9m_gain_count": "string (double)",
+  "9m_loss_count": "string (double)",
+  "9m_average_return": "string (double)",
+  "9m_stdev": "string (double)",
+  "1y_gain_count": "string (double)",
+  "1y_loss_count": "string (double)",
+  "1y_average_return": "string (double)",
+  "1y_stdev": "string (double)",
+  "2y_gain_count": "string (double)",
+  "2y_loss_count": "string (double)",
+  "2y_average_return": "string (double)",
+  "2y_stdev": "string (double)",
+  "3y_gain_count": "string (double)",
+  "3y_loss_count": "string (double)",
+  "3y_average_return": "string (double)",
+  "3y_stdev": "string (double)",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## analyst-ratings-firm: object
+
+<ResponseField name="id" type="string">
+Id of the analyst firm
+</ResponseField>
+
+<ResponseField name="currency" type="string">
+Default currency of the analyst firm
+</ResponseField>
+
+<ResponseField name="homepage" type="string">
+URL for the analyst firm
+</ResponseField>
+
+<ResponseField name="name" type="string">
+Analyst firm name
+</ResponseField>
+
+<ResponseField name="updated" type="integer (int64)">
+Last update timestamp in UTC Unix epoch timestamp (seconds)
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "currency": "string",
+  "homepage": "string",
+  "name": "string",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## dividends:object 
+
+<ResponseField name="id" type="string">
+Unique ID of this entry
+</ResponseField>
+
+<ResponseField name="date" type="string (YYYY-MM-DD)">
+Announced Date on calendar
+</ResponseField>
+
+<ResponseField name="notes" type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<ResponseField name="updated" type="integer (int64)">
+Last update timestamp, UTC
+</ResponseField>
+
+<ResponseField name="ticker" type="string">
+Ticker Symbol (F, MSFT, etc...)
+</ResponseField>
+
+<ResponseField name="name" type="string">
+Name of security
+</ResponseField>
+
+<ResponseField name="exchange" type="string">
+Exchange (NYSE, NASDAQ, etc...)
+</ResponseField>
+
+<ResponseField name="currency" type="string">
+Currency the data is denominated in
+</ResponseField>
+
+<ResponseField name="frequency" type="integer">
+Frequency of the dividend 
+</ResponseField>
+
+<ResponseField name="dividend" type="string (double)">
+Dividend value. Expected value is a double if set or empty if null/
+</ResponseField>
+
+<ResponseField name="dividend_prior" type="string (double)">
+Period prior dividend value. Expected value is a double if set or empty if null.
+</ResponseField>
+
+<ResponseField name="dividend_type" type="string">
+Type of dividend
+</ResponseField>
+
+<ResponseField name="dividend_yield" type="string (double)">
+Yield of dividend. Expected value is a double if set or empty if null.
+</ResponseField>
+
+<ResponseField name="ex_dividend_date" type="string (YYYY-MM-DD)">
+Dividend Ex Date
+</ResponseField>
+
+<ResponseField name="payable_date" type="string (YYYY-MM-DD)">
+Dividend Payable Date
+</ResponseField>
+
+<ResponseField name="record_date" type="string (YYYY-MM-DD)">
+Dividend Recorded Date
+</ResponseField>
+
+<ResponseField name="importance" type="integer">
+`0`,`1`,`2`,`3`,`4`, or `5`. Subjective basis of how important event is to market. `5` = high
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-DD-MM)",
+  "notes": "string",
+  "updated": "integer",
+  "ticker": "string",
+  "name": "string",
+  "exchange": "string",
+  "currency": "string",
+  "frequency": "integer",
+  "dividend": "string (double)",
+  "dividend_prior": "string (double)",
+  "dividend_type": "string",
+  "dividend_yield": "string (double)",
+  "ex_dividend_date": "string (YYYY-DD-MM)",
+  "payable_date": "string (YYYY-DD-MM)",
+  "record_date": "string (YYYY-DD-MM)",
+  "importance": "integer"
+}
+```
+</Accordion>
+
+## earnings: object
+
+<ResponseField name="id" type="string"></ResponseField>
+
+<ResponseField name="date" type="string (YYYY-DD-MM)">
+Announced Date on Calendar
+</ResponseField>
+
+<ResponseField name="date_confirmed" type="string (1/0)">
+If the report date was confirmed (vs est)
+</ResponseField>
+
+<ResponseField name="time" type="string (HH:MM:SS)">
+Announced Time on Calendar, 24hr format
+</ResponseField>
+
+<ResponseField name="ticker" type="string">
+Ticker Symbol (F, MSFT, etc...)
+</ResponseField>
+
+<ResponseField name="exchange" type="string">
+Exchange (NYSE, NASDAQ, etc...)
+</ResponseField>
+
+<ResponseField name="name" type="string">
+Name of security
+</ResponseField>
+
+<ResponseField name="currency" type="string">
+Currency the data is denominated in
+</ResponseField>
+
+<ResponseField name="period" type="string">
+`Q1`, `Q2`, `Q3`, `Q4`, `FY`, `H1`, or `H2`. Period of the earnings actual 
+</ResponseField>
+
+<ResponseField name="period_year" type="integer">
+Period Year of the earnings actual
+</ResponseField>
+
+<ResponseField name="eps_type" type="string">
+`Adj`, `GAAP`, or `FFO`. EPS Type
+</ResponseField>
+
+<ResponseField name="eps" type="string (double)">
+Comparable and Adjusted Earnings Per Share
+</ResponseField>
+
+<ResponseField name="eps_est" type="string (double)">
+Adjusted EPS Consensus Aggregate Analyst Estimate
+</ResponseField>
+
+<ResponseField name="eps_prior" type="string (double)">
+Adjusted EPS from Prior Period
+</ResponseField>
+
+<ResponseField name="eps_surprise" type="string (double)">
+EPS deviation from estimate
+</ResponseField>
+
+<ResponseField name="eps_surprise_percent" type="string (double)">
+Deviation from estimate as percentage
+</ResponseField>
+
+<ResponseField name="revenue_type" type="string">
+`Adj`, `GAAP`, or `FFO`. Revenue Type
+</ResponseField>
+
+<ResponseField name="revenue" type="string (integer)">
+Revenue
+</ResponseField>
+
+<ResponseField name="revenue_est" type="string (integer)">
+Revenue estimate
+</ResponseField>
+
+<ResponseField name="revenue_prior" type="string (integer)">
+Revenue value for previous period 
+</ResponseField>
+
+<ResponseField name="revenue_surprise" type="string (integer)">
+Revenue deviation from estimate
+</ResponseField>
+
+<ResponseField name="revenue_surprise percent" type="string (double)">
+Deviation from estimate as percentage
+</ResponseField>
+
+<ResponseField name="importance" type="integer">
+`0`,`1`,`2`,`3`,`4`, or `5`. Subjective basis of how important event is to market. 5 = high
+</ResponseField>
+
+<ResponseField name="notes" type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<ResponseField name="updated" type="integer (int64)">
+Last update timestamp, UTC
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-DD-MM)",
+  "date_confirmed": "string (1/0)",
+  "time": "string (HH:MM:SS)",
+  "ticker": "string",
+  "exchange": "string",
+  "name": "string",
+  "currency": "string",
+  "period": "string",
+  "period_year": "integer",
+  "eps_type": "string",
+  "eps": "string (double)",
+  "eps_est": "string (double)",
+  "eps_prior": "string (double)",
+  "eps_surprise": "string (double)",
+  "eps_surprise_percent": "string (double)",
+  "revenue_type": "string",
+  "revenue": "string (integer)",
+  "revenue_est": "string (integer)",
+  "revenue_prior": "string (integer)",
+  "revenue_surprise": "string (integer)",
+  "revenue_surprise_percent": "string (double)",
+  "importance": "integer",
+  "notes": "string",
+  "updated": "integer"
+}
+```
+</Accordion>
+
+## fda:object
+
+<ResponseField name="id" type="string">
+Unique ID of this entry
+</ResponseField>
+
+<ResponseField name="event_type" type="string">
+`clinical_trial`, `approval_fda`, `approval_forign`, or `pdufa_date`. Specifies which type of event the row represents.
+</ResponseField>
+
+<ResponseField name="date" type="string (YYYY-DD-MM)">
+Date on which Benzinga received the information
+</ResponseField>
+
+<ResponseField name="time" type="string (HH:MM:SS)">
+Time at which Benzinga received the information
+</ResponseField>
+
+<ResponseField name="companies" type="object[]">
+Companies developing the drug
+</ResponseField>
+
+<ResponseField name="companies[].id" type="string">
+Company ID
+</ResponseField>
+
+<ResponseField name="companies[].name" type="string">
+Comapny name
+</ResponseField>
+
+<ResponseField name="companies[].cik" type="string (10-digit integer)">
+Company primary CIK
+</ResponseField>
+
+<ResponseField name="companies[].securities" type="object[]">
+Company securities
+</ResponseField>
+
+<ResponseField name="companies[].securities[].exchange" type="string">
+Exchange on which the securityy is listed
+</ResponseField>
+
+<ResponseField name="companies[].securities[].symbol" type="string">
+Ticker symbol for the security
+</ResponseField>
+
+<ResponseField name="drug" type="object"></ResponseField>
+
+<ResponseField name="drug.id" type="integer">Internal ID for the drug</ResponseField>
+
+<ResponseField name="drug.name" type="string">Name of the drug</ResponseField>
+
+<ResponseField name="drug.indcation_symbol" type="string[]">Indications/symptoms</ResponseField>
+
+<ResponseField name="drug.generic" type="boolean">Is this a generic drug?</ResponseField>
+
+<ResponseField name="status" type="string">
+The announced status of the drug
+</ResponseField>
+
+<ResponseField name="nic_number" type="string (NCTXXXXXXXX)">
+The US National Library of Medicine's individual identifier for each clinical trial
+</ResponseField>
+
+<ResponseField name="target_date" type="string">
+`YYYY-MM-DD`, `YYYY-MM`, `YYYY-Q[1-4]`, `YYYY-H[1-2]`, or `YYYY-[EARLY, MID, LATE]`. The announced target date
+</ResponseField>
+
+<ResponseField name="outcome_brief" type="string">
+`Planned to Submit` , `Filing Accepted` , `Updated Application` , `Planned Meeting` , `Announced Clearance to Study` , `Concluded Enrollment` , `Initiated Study` , `Study Progressed` , `Concluded Study` , `Temporarily Suspended` , `Approved to Commence` , `Decision Deferred` , `Provided Update` , `Data Release Scheduled` , `Published Results` , or `Received Use Authorization`. The significance/outcome of the announcement, categorized
+</ResponseField>
+
+<ResponseField name="outcome" type="string">
+The significance/outcome of the announcement, categorized
+</ResponseField>
+
+<ResponseField name="commentary" type="string">
+Additional information beyond the few-sentence outcome
+</ResponseField>
+
+<ResponseField name="source_type" type="string">
+`Press Release` , `FDA Website` , or `Other`. The type of source from which this data was obtained
+</ResponseField>
+
+<ResponseField name="source_link" type="string">
+The URL of the source
+</ResponseField>
+
+<ResponseField name="notes" type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<ResponseField name="created" type="integer">
+Object creation Unix timestamp, UTC
+</ResponseField>
+
+<ResponseField name="updated" type="integer">
+Last updated Unix timestamp, UTC
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "event_type": "string",
+  "date": "string (YYYY-DD-MM)",
+  "time": "string (HH:MM:SS)",
+  "companies": [
+    {
+      "id": "string",
+      "name": "string",
+      "cik": "string (10-digit integer)",
+      "securities": [
+        {
+          "exchange": "string",
+          "symbol": "string"
+        }
+      ]
+    }
+  ],
+  "drug": {
+    "id": "integer",
+    "name": "string",
+    "indication_symptom": [
+      "string"
+    ],
+    "generic": "boolean"
+  },
+  "status": "string",
+  "nic_number": "string (NCTXXXXXXXX)",
+  "target_date": "string (YYYY-MM-DD, YYYY-MM, YYYY-Q[1-4], YYYY-H[1-2], or YYYY-[EARLY, MID, LATE])",
+  "outcome_brief": "string",
+  "outcome": "string",
+  "commentary": "string",
+  "source_type": "string",
+  "source_link": "string",
+  "notes": "string",
+  "created": "integer",
+  "updated": "integer"
+}
+```
+</Accordion>
+
+## splits:object
+<ResponseField name="id" type="string">
+Unique ID of this entry
+</ResponseField>
+
+<ResponseField name="updated" type="integer">
+Last updated Unix timestamp, UTC
+</ResponseField> 
+
+<ResponseField name="date_anounced" type="string (YYYY-DD-MM)">
+Announced Date on calendar (formerly labeled as date in our docs)
+</ResponseField>
+
+<ResponseField name="companies[].securities[].symbol" type="string">
+Ticker symbol for the security
+</ResponseField>
+
+<ResponseField name="exchange" type="string">
+Exchange (NYSE, NASDAQ, etc...)
+</ResponseField>
+
+<ResponseField name="ratio" type="string (x:y)">
+Ratio of the split
+</ResponseField>
+
+<ResponseField name="optionable" type="boolean">
+Is the script optionable? 
+</ResponseField>
+
+<ResponseField name="date_ex" type="string (YYYY-MM-DD)">
+Ex date
+</ResponseField>
+
+<ResponseField name="date_recorded" type="string (YYYY-MM-DD)">
+Recorded date
+</ResponseField>
+
+<ResponseField name="date_distribution" type="string (YYYY-MM-DD)">
+Distribution date
+</ResponseField>
+
+<ResponseField name="importance" type="integer">
+`0`,`1`,`2`,`3`,`4`, or `5`. Subjective basis of how important event is to market. `5` = high
+</ResponseField>
+
+<ResponseField name="notes" type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "updated": "integer",
+  "date_announced": "string (YYYY-DD-MM)",
+  "ticker": "string",
+  "exchange": "string",
+  "ratio": "string (x:y)",
+  "optionable": "boolean",
+  "date_ex": "string (YYYY-MM-DD)",
+  "date_recorded": "string (YYYY-MM-DD)",
+  "date_distribution": "string (YYYY-MM-DD)",
+  "importance": "integer",
+  "notes": "string"
+}
+```
+</Accordion>
+
+## economics:object
+<ResponseField name="id" type="string">
+Unique identifier for each data point
+</ResponseField>
+
+<ResponseField name="date" type="string (YYYY-MM-DD)"></ResponseField>
+
+<ResponseField name="time" type="string (HH:MM:SS)">
+Announced Time on Calendar, 24hr format
+</ResponseField>
+
+<ResponseField name="country" type="string">
+3-Character Country Code (USA, CAN, etc...)
+</ResponseField>
+
+<ResponseField name="event_name" type="string">
+Economic event
+</ResponseField>
+
+<ResponseField name="event_period" type="string">
+Period of Time (Q1, September, Third Week of August...)
+</ResponseField>
+
+<ResponseField name="period_year" type="integer(YYYY)">
+Period Year
+</ResponseField>
+
+<ResponseField name="actual" type="string (float)">
+Value of economic Indicator
+</ResponseField>
+
+<ResponseField name="actual_t" type="string">
+Unit for actual field
+</ResponseField>
+
+<ResponseField name="consensus" type="string (float)">
+Estimate for actual field
+</ResponseField>
+
+<ResponseField name="consensus_t" type="string">
+Unit for consensus field
+</ResponseField>
+
+<ResponseField name="prior" type="string (float)">
+Value of actual field for previous period
+</ResponseField>
+
+<ResponseField name="prior_t" type="string">
+Unit for prior field
+</ResponseField>
+
+<ResponseField name="importance" type="integer">
+`0`,`1`,`2`,`3`,`4`, or `5`. Subjective basis of how important event is to market. `5` = high
+</ResponseField>
+
+<ResponseField name="updated" type="integer">
+Last update timestamp, UTC
+</ResponseField>
+
+<ResponseField name="description" type="string">
+Event description
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-MM-DD)",
+  "time": "string (HH:MM:SS)",
+  "country": "string",
+  "event_name": "string",
+  "event_period": "string",
+  "period_year": "integer (YYYY)",
+  "actual": "string (float)",
+  "actual_t": "string",
+  "consensus": "string (float)",
+  "consensus_t": "string",
+  "prior": "string (float)",
+  "prior_t": "string",
+  "importance": "integer",
+  "updated": "integer",
+  "description": "string"
+}
+```
+</Accordion>
+
+## guidance:object
+
+<ResponseField name="id" type="string">	
+Unique ID of this entry
+</ResponseField>
+
+<ResponseField name="date" type="string (YYYY-MM-DD)">
+Announced Date on Calendar
+</ResponseField>
+
+<ResponseField name="time"	type="string (HH:MM:SS)">
+Announced Time on Calendar, 24hr format
+</ResponseField>
+
+<ResponseField name="ticker"	type="string">
+Ticker symbol of company guidance data is for
+</ResponseField>
+
+<ResponseField name="exchange" type="string">
+Exchange (NYSE, NASDAQ, etc...)
+</ResponseField>
+
+<ResponseField name="name" type="string">
+The name of the publicly traded company that the guidance data is for
+</ResponseField>
+
+<ResponseField name="currency"	type="string">
+Currency the data is denominated in
+</ResponseField>
+
+<ResponseField name="period" type="string">
+`Q1` , `Q2` , `Q3` , `Q4` , or `FY`	
+Period within-year of the guidance
+</ResponseField>
+
+<ResponseField name="period_year" type="integer (YYYY)">
+Period year of the guidance
+</ResponseField>
+
+<ResponseField name="prelim" type="string"> 
+`Y` or `N`. 
+Yes or No for if guidance is a preliminary earnings report
+</ResponseField>
+
+<ResponseField name="is_primary" type="string"> 
+`Y` , `N` , or `All` 	
+Specifies type of guidance returned - primary, secondary or all
+</ResponseField>
+
+<ResponseField name="eps_type" type="string">
+`Adj` , `GAAP` , or `FFO` 	
+Reported EPS Type can be Adjusted, GAAP or FFO. FFO is only used for REITs.
+</ResponseField>
+
+<ResponseField name="eps_guidance_est" type="string (float)">
+Adjusted EPS Consensus Estimate
+</ResponseField>
+
+<ResponseField name="eps_guidance_max" type="string (float)">
+Adjusted EPS from Prior Period Max
+</ResponseField>
+
+<ResponseField name="eps_guidance_min" type="string (float)">
+Adjusted EPS from Prior Period Min
+</ResponseField>
+
+<ResponseField name="eps_guidance_prior_max" type="string (float)">
+Adjusted EPS from Prior Period Max
+</ResponseField>
+
+<ResponseField name="eps_guidance_prior_min" type="string (float)">
+Adjusted EPS from Prior Period Min
+</ResponseField>
+
+<ResponseField name="revenue_guidance_est" type="string (float)">
+Revenue guidance estimate
+</ResponseField>
+
+<ResponseField name="revenue_guidance_max" type="string (float)">
+Revenue guidance max
+</ResponseField>
+
+<ResponseField name="revenue_guidance_min" type="string (float)">	
+Revenue guidance min
+</ResponseField>
+
+<ResponseField name="revenue_guidance_prior_max" type="string (float)">	
+Revenue guidance max from previous period
+</ResponseField>
+
+<ResponseField name="revenue_guidance_prior_min" type="string (float)">
+Revenue guidance min from previous period
+</ResponseField>
+
+<ResponseField name="revenue_type" type="string">
+`Adj` , `GAAP`, or `FFO` 	
+Revenue Type
+</ResponseField>
+
+<ResponseField name="importance" type="integer">
+`0` , `1`, `2` , `3` , `4` , or `5` 	
+Subjective basis of how important event is to market. `5` = high
+</ResponseField>
+
+<ResponseField name="notes" type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<ResponseField name="updated" type="integer (int64)">
+Last updated timestamp, UTC
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-MM-DD)",
+  "time": "string (HH:MM:SS)",
+  "ticker": "string",
+  "exchange": "string",
+  "name": "string",
+  "currency": "string",
+  "period": "string",
+  "period_year": "integer (YYYY)",
+  "prelim": "string",
+  "is_primary": "string",
+  "eps_type": "string",
+  "eps_guidance_est": "string (float)",
+  "eps_guidance_max": "string (float)",
+  "eps_guidance_min": "string (float)",
+  "eps_guidance_prior_max": "string (float)",
+  "eps_guidance_prior_min": "string (float)",
+  "revenue_guidance_est": "string (float)",
+  "revenue_guidance_max": "string (float)",
+  "revenue_guidance_min": "string (float)",
+  "revenue_guidance_prior_max": "string (float)",
+  "revenue_guidance_prior_min": "string (float)",
+  "revenue_type": "string",
+  "importance": "integer",
+  "notes": "string",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## ipos:object
+
+<ResponseField name="id" type="string">
+Unique ID of this entry
+</ResponseField>
+
+<ResponseField name="date" type="string">
+`YYYY-MM-DD`, `YYYY-QN`, `YYYY-MM`, `YYYY-HN`, `YYYY`
+Expected (Actual) IPO Open Date
+</ResponseField>
+
+<ResponseField name="time" type="string (HH:MM:SS)">
+Time of row entry
+</ResponseField>
+
+<ResponseField name="ticker" type="string">
+Ticker symbol for IPO
+</ResponseField>
+
+<ResponseField name="exchange"	type="string">
+Exchange (NYSE, NASDAQ, etc...)
+</ResponseField>
+
+<ResponseField name="name" type="string">	
+The name of the IPO company
+</ResponseField>
+
+<ResponseField name="open_date_verified" type="boolean">
+Is the IPO open date verified?
+</ResponseField>
+
+<ResponseField name="pricing_date" type="string (YYYY-MM-DD)">
+date of IPO pricing
+</ResponseField>
+
+<ResponseField name="currency" type="string">
+Currency the data is denominated in
+</ResponseField>
+
+<ResponseField name="price_min" type="string (double)">
+Minimum open price
+</ResponseField>
+
+<ResponseField name="price_max"	type="string (double)">
+Maximum open price
+</ResponseField>
+
+<ResponseField name="price_public_offering" type="string (double)">
+Price at which the company sells its shares to investors during an IPO
+</ResponseField>
+
+<ResponseField name="price_open" type="string (double)">
+Price at open
+</ResponseField>
+
+<ResponseField name="deal_status" type="string">
+`Rumored` , `Initial Filing` , `Amended` , `Priced` , `Closed` , `Postponed` , `Withdrawn`	
+status of IPO
+</ResponseField>
+
+<ResponseField name="ipo_type" type="string"> 
+`Ordinary Shares` , `Depository Receipt` , `Unit` , `SPAC Unit` , `SPAC` , `MandA` , `Direct Listing`	
+Type of IPO
+</ResponseField>
+
+<ResponseField name="insider_lockup_days"	type="integer">	
+Insider lockup period in days
+</ResponseField>
+
+<ResponseField name="insider_lockup_date"	type="string (YYYY-MM-DD)">
+Insider lockup date
+</ResponseField>
+
+<ResponseField name="offering_value" type="integer (int64)">
+Value of IPO (offering_shares multiplied by the public offering price)
+</ResponseField>
+
+<ResponseField name="offering_shares" type="integer (int64)">
+Number of shares offered in IPO
+</ResponseField>
+
+<ResponseField name="shares_outstanding" type="integer">
+Temporarily unavailable. If pre-IPO shares outstanding is an important data field for you, please let us know.
+</ResponseField>
+
+<ResponseField name="lead_underwriters" type="string[]">
+List of lead underwriter(s)
+</ResponseField>
+
+<ResponseField name="other_underwriters" type="string[]">
+List of other/secondary underwriter(s)
+</ResponseField>
+
+<ResponseField name="underwriter_quiet_expiration_days" type="integer">
+Underwriter quite expiration period in days
+</ResponseField>
+
+<ResponseField name="underwriter_quiet_expiration_date" type="string (YYYY-MM-DD)">
+Underwriter quite expiration date
+</ResponseField>
+
+<ResponseField name="notes"	type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<ResponseField name="updated" type="integer (int64)">
+Last updated timestamp, UTC
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-MM-DD, YYYY-QN, YYYY-MM, YYYY-HN, YYYY)",
+  "time": "string (HH:MM:SS)",
+  "ticker": "string",
+  "exchange": "string",
+  "name": "string",
+  "open_date_verified": "boolean",
+  "pricing_date": "string (YYYY-MM-DD)",
+  "currency": "string",
+  "price_min": "string (double)",
+  "price_max": "string (double)",
+  "price_public_offering": "string (double)",
+  "price_open": "string (double)",
+  "deal_status": "string",
+  "ipo_type": "string",
+  "insider_lockup_days": "integer",
+  "insider_lockup_date": "string (YYYY-MM-DD)",
+  "offering_value": "integer (int64)",
+  "offering_shares": "integer (int64)",
+  "shares_outstanding": "integer",
+  "lead_underwriters": [
+    "string"
+  ],
+  "other_underwriters": [
+    "string"
+  ],
+  "underwriter_quiet_expiration_days": "integer",
+  "underwriter_quiet_expiration_date": "string (YYYY-MM-DD)",
+  "notes": "string",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## offerings:object
+
+<ResponseField name="id" type="string">
+Unique ID of this entry
+</ResponseField>
+
+<ResponseField name="date"	type="string">
+`YYYY-MM-DD`, `YYYY-QN`, `YYYY-MM`, `YYYY-HN`, `YYYY`	
+Date of offering issuance
+</ResponseField>
+
+<ResponseField name="time"	type="string (HH:MM:SS)">
+Time of offering issuance
+</ResponseField>
+
+<ResponseField name="ticker"	type="string">	
+Ticker symbol for offering
+</ResponseField>
+
+<ResponseField name="exchange"	type="string">
+Exchange (NYSE, NASDAQ, etc...)
+</ResponseField>
+
+<ResponseField name="name"	type="string">
+The name of the company
+</ResponseField>
+
+<ResponseField name="currency"	type="string">
+The currency of the offering
+</ResponseField>
+
+<ResponseField name="shelf"	type="boolean">
+If the offer is a Shelf. True if securities are sold in portion over a longer period. False if securities are sold at the initial date of offering.
+</ResponseField>
+
+<ResponseField name="price"	type="string (double)">
+The offering price
+</ResponseField>
+
+<ResponseField name="proceeds"	type="string (double)">
+The total value of the offering
+</ResponseField>
+
+<ResponseField name="number_shares"	type="integer">
+The number of shares in the offering
+</ResponseField>
+
+<ResponseField name="importance"	type="integer">
+Benzinga assigned score for how important the event is
+</ResponseField>
+
+<ResponseField name="notes"	type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<ResponseField name="updated"	type="integer (int64)">
+Last updated timestamp, UTC
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-MM-DD, YYYY-QN, YYYY-MM, YYYY-HN, YYYY)",
+  "time": "string (HH:MM:SS)",
+  "ticker": "string",
+  "exchange": "string",
+  "name": "string",
+  "currency": "string",
+  "shelf": "boolean",
+  "price": "string (double)",
+  "proceeds": "string (double)",
+  "number_shares": "integer",
+  "importance": "integer",
+  "notes": "string",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## ma:object
+
+<ResponseField name="id"	type="string">
+Undque ID of this entry
+</ResponseField>
+
+<ResponseField name="date"	type="string (YYYY-MM-DD)">
+Date of deal announcment
+</ResponseField>
+
+<ResponseField name="date_expected"	type="string">
+`YYYY-MM-DD`, `YYYY-QN`, `YYYY-MM`	
+Date deal is expected to complete
+</ResponseField>
+
+<ResponseField name="date_completed"	type="string (YYYY-MM-DD)">
+Date of deal completion
+</ResponseField>
+
+<ResponseField name="acquirer_ticker"	type="string">
+Ticker symbol of acquiring company
+</ResponseField>
+
+<ResponseField name="acquirer_exchange"	type="string">
+Exchange for the acquirer ticker
+</ResponseField>
+
+<ResponseField name="acquirer_name"	type="string">
+Name of acquiring company
+</ResponseField>
+
+<ResponseField name="target_ticker"	type="string">
+Ticker symbol of target company
+</ResponseField>
+
+<ResponseField name="target_exchange"	type="string">
+Exchange for the target ticker
+</ResponseField>
+
+<ResponseField name="target_name"	type="string">
+Name of the target company
+</ResponseField>
+
+<ResponseField name="currency"	type="string">
+Currency the data is denominated in
+</ResponseField>
+
+<ResponseField name="deal_type"	type="string">
+`Acquisition` , `Merger` , `Asset Sale` 	
+Type of deal
+</ResponseField>
+
+<ResponseField name="deal_size"	type="string (double)">
+Aggregate deal value
+</ResponseField>
+
+<ResponseField name="deal_payment_type"	type="string">
+`Cash` ,`Stock` , `Cash & Stock` 
+Deal payment type
+</ResponseField>
+
+<ResponseField name="deal_status"	type="string">
+`Rumored` , `Announced` , `Regulatory Review` , `Completed` , `Canceled` 	
+Deal status
+</ResponseField>
+
+<ResponseField name="deal_terms_extra"	type="string">
+Any additional relevant terms
+</ResponseField>
+
+<ResponseField name="importance"	type="integer">
+Benzinga assigned score for how important entry is
+</ResponseField>
+
+<ResponseField name="notes"	type="string">
+Any supplimentarty details. Used in conjunction with Deal Terms for non term notes
+</ResponseField>
+
+<ResponseField name="updated"	type="integer (int64)">
+Last updated timestamp, UTC
+</ResponseField>    
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-MM-DD)",
+  "date_expected": "string (YYYY-MM-DD, YYYY-QN, YYYY-MM)",
+  "date_completed": "string (YYYY-MM-DD)",
+  "acquirer_ticker": "string",
+  "acquirer_exchange": "string",
+  "acquirer_name": "string",
+  "target_ticker": "string",
+  "target_exchange": "string",
+  "target_name": "string",
+  "currency": "string",
+  "deal_type": "string",
+  "deal_size": "string (double)",
+  "deal_payment_type": "string",
+  "deal_status": "string",
+  "deal_terms_extra": "string",
+  "importance": "integer",
+  "notes": "string",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## ratings:object
+
+<ResponseField name="id"	type="string">
+Unique ID of this entry
+</ResponseField>
+
+<ResponseField name="date"	type="string (YYYY-MM-DD)">
+Date for rating
+</ResponseField>
+
+<ResponseField name="time" 	type="string (HH:MM:SS)">
+Time for rating
+</ResponseField>
+
+<ResponseField name="ticker" 	type="string">
+Ticker symbol of company that is subject of rating
+</ResponseField>
+
+<ResponseField name="exchange"	type="string">
+Exchange (NYSE, NASDAQ, etc...)
+</ResponseField>
+
+<ResponseField name="name" 	type="string">
+Name of company that is subject of rating
+</ResponseField>
+
+<ResponseField name="currency" 	type="string">
+Currency the data is denominated in
+</ResponseField>
+
+<ResponseField name="action_pt"	type="string">
+`Announces` ,`Maintains` , `Lowers` , `Raises` ,`Removes` 	
+Description of the change in price target from firm's last price target
+</ResponseField>
+
+<ResponseField name="action_company"	type="string">
+`Downgrades` , `Maintains` , `Reinstates` , `Reiterates` , `Upgrades` ,`Assumes` , `Initiates Coverage On` , `Terminates Coverage On` , `Removes` , `Suspends` , `Firm Dissolved`	
+Description of the change in rating from firm's last rating. Note that all of these terms are precisely defined.
+</ResponseField>
+
+<ResponseField name="rating_current"	type="string">
+The analyst's rating for the company
+</ResponseField>
+
+<ResponseField name="pt_current"	type="string (float)">
+Analyst's current price target
+</ResponseField>
+
+<ResponseField name="adjusted_pt_current"	type="string (float)">
+Analyst's current price target, adjusted to account for stock splits and stock dividends. If none are applicable, the pt_current value is used.
+</ResponseField>
+
+<ResponseField name="rating_prior"	type="string">
+Prior analyst rating for the company
+</ResponseField>
+
+<ResponseField name="pt_prior"	type="string (float)">
+Analyst's prior price target
+</ResponseField>
+
+<ResponseField name="adjusted_pt_prior"	type="string (float)">
+Analyst's prior price target, adjusted to account for stock splits and stock dividends. If none are applicable, the pt_prior value is used.
+</ResponseField>
+
+<ResponseField name="url"	type="string (URL)">
+URL for analyst ratings page for this ticker on Benzinga.com
+</ResponseField>
+
+<ResponseField name="url_calendar"	type="string (URL)">
+URL for analyst ratings page for this ticker on Benzinga.com
+</ResponseField>
+
+<ResponseField name="url_news"	type="string (URL)">
+URL for analyst ratings news articles for this ticker on Benzinga.com
+</ResponseField>
+
+<ResponseField name="analyst"	type="string">
+Name of the analyst firm that published the rating
+</ResponseField>
+
+<ResponseField name="analyst_id"	type="string">
+Id of the analyst
+</ResponseField>
+
+<ResponseField name="analyst_name"	type="string">
+Name of the analyst (person) that published the rating
+</ResponseField>
+
+<ResponseField name="ratings_accuracy"	type="object">
+Analyst accuracy scores
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.smart_score"	type="string (double)">
+A weighted average of the total_ratings_percentile, overall_avg_return_percentile, and overall_success_rate
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_success_rate"	type="string (double)">	
+The percentage of gain/loss ratings that resulted in a gain overall
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_avg_return_percentile"	type="string (double)">	
+The percentile of this analyst’s overall average return per rating in comparison to other analysts' overall average returns per rating
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.total_ratings_percentile"	type="string (double)">
+The percentile of this analyst’s total number of ratings in comparison to the total number of ratings published by all other analysts
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.total_ratings"	type="integer (int64)">
+Number of recommendations made by this analyst
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_gain_count"	type="integer (int64)">
+The number of ratings that have gained value since the date of recommendation
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_loss_count"	type="integer (int64)">
+The number of ratings that have lost value since the date of recommendation
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_average_return"	type="string (double)">
+The average percent price difference per rating since the date of recommendation
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.overall_stdev"	type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings since the date of recommendation
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1m_gain_count"	type="string (double)">
+The number of ratings that have gained value over the last month
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1m_loss_count"	type="string (double)">
+The number of ratings that have lost value over the last month
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1m_average_return"	type="string (double)">
+The average percent price difference per rating over the last month
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1m_stdev"	type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last month
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3m_gain_count"	type="string (double)">
+The number of ratings that have gained value over the last three months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3m_loss_count"	type="string (double)">
+The number of ratings that have lost value over the last three months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3m_average_return"	type="string (double)">
+The average percent price difference per rating over the last three months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3m_stdev"	type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last three months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.9m_gain_count"	type="string (double)">
+The number of ratings that have gained value over the last nine months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.9m_loss_count"	type="string (double)">
+The number of ratings that have lost value over the last nine months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.9m_average_return"	type="string (double)">
+The average percent price difference per rating over the last nine months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.9m_stdev"	type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last nine months
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1y_gain_count"	type="string (double)">
+The number of ratings that have gained value over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1y_loss_count"	type="string (double)">
+The number of ratings that have lost value over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1y_average_return"	type="string (double)">
+The average percent price difference per rating over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.1y_stdev"	type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last year (TTM)
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.2y_gain_count"	type="string (double)">
+The number of ratings that have gained value over the last two years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.2y_loss_count"	type="string (double)">
+The number of ratings that have lost value over the last two years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.2y_average_return"	type="string (double)">
+The average percent price difference per rating over the last two years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.2y_stdev"	type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last two years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3y_gain_count"	type="string (double)">
+The number of ratings that have gained value over the last three years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3y_loss_count"	type="string (double)">
+The number of ratings that have lost value over the last three years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3y_average_return"	type="string (double)">
+The average percent price difference per rating over the last three years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.3y_stdev"	type="string (double)">
+The standard deviation in percent price difference in the analyst’s ratings over the last three years
+</ResponseField>
+
+<ResponseField name="ratings_accuracy.updated"	type="integer (int64)">
+Last update timstamp in UTC Unix epoch timestamp (seconds)
+</ResponseField>
+
+<ResponseField name="importance"	type="string">
+`0` , `1` , `2` , `3` , `4` , `5` 	
+Subjective Basis of How Important Event is to Market. `5` = High
+</ResponseField>
+
+<ResponseField name="notes"	type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<ResponseField name="updated"	type="integer (int64)">
+Last updated timestamp, UTC
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-MM-DD)",
+  "time": "string (HH:MM:SS)",
+  "ticker": "string",
+  "exchange": "string",
+  "name": "string",
+  "currency": "string",
+  "action_pt": "string",
+  "action_company": "string",
+  "rating_current": "string",
+  "pt_current": "string (float)",
+  "adjusted_pt_current": "string (float)",
+  "rating_prior": "string",
+  "pt_prior": "string (float)",
+  "adjusted_pt_prior": "string (float)",
+  "url": "string (URL)",
+  "url_calendar": "string (URL)",
+  "url_news": "string (URL)",
+  "analyst": "string",
+  "analyst_id": "string",
+  "analyst_name": "string",
+  "ratings_accuracy": {
+    "smart_score": "string (double)",
+    "overall_success_rate": "string (double)",
+    "overall_avg_return_percentile": "string (double)",
+    "total_ratings_percentile": "string (double)",
+    "total_ratings": "integer (int64)",
+    "overall_gain_count": "integer (int64)",
+    "overall_loss_count": "integer (int64)",
+    "overall_average_return": "string (double)",
+    "overall_stdev": "string (double)",
+    "1m_gain_count": "string (double)",
+    "1m_loss_count": "string (double)",
+    "1m_average_return": "string (double)",
+    "1m_stdev": "string (double)",
+    "3m_gain_count": "string (double)",
+    "3m_loss_count": "string (double)",
+    "3m_average_return": "string (double)",
+    "3m_stdev": "string (double)",
+    "9m_gain_count": "string (double)",
+    "9m_loss_count": "string (double)",
+    "9m_average_return": "string (double)",
+    "9m_stdev": "string (double)",
+    "1y_gain_count": "string (double)",
+    "1y_loss_count": "string (double)",
+    "1y_average_return": "string (double)",
+    "1y_stdev": "string (double)",
+    "2y_gain_count": "string (double)",
+    "2y_loss_count": "string (double)",
+    "2y_average_return": "string (double)",
+    "2y_stdev": "string (double)",
+    "3y_gain_count": "string (double)",
+    "3y_loss_count": "string (double)",
+    "3y_average_return": "string (double)",
+    "3y_stdev": "string (double)",
+    "updated": "integer (int64)"
+  },
+  "importance": "string",
+  "notes": "string",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## conferenceCalls:object
+
+<ResponseField name="id"	type="string">
+Unique ID of this entry
+</ResponseField>
+
+<ResponseField name="date"	type="string (YYYY-MM-DD)">
+Announced Date on Calendar
+</ResponseField>
+
+<ResponseField name="time"	type="string (HH:MM:SS)">
+Announced Time on Calendar
+</ResponseField>
+
+<ResponseField name="name" type="string">
+Name of company
+</ResponseField>
+
+<ResponseField name="exchange"	type="string">
+Exchange (NYSE, NASDAQ, etc...)
+</ResponseField>
+
+<ResponseField name="ticker"	type="string">
+Ticker symbol of company
+</ResponseField>
+
+<ResponseField name="start_time"	type="string (HH:MM:SS)">
+Time of earnings conference call, in local time
+</ResponseField>
+
+<ResponseField name="phone_num"	type="string (NNN-NNN-NNNN)">
+Phone number of conference call
+</ResponseField>
+
+<ResponseField name="international_num"	type="string (NNN-NNN-NNNN)">
+International number to call if outside USA
+</ResponseField>
+
+<ResponseField name="reservation_num"	type="string (NNN-NNN-NNNN)">
+Reservation number for conference call if avaliable
+</ResponseField>
+
+<ResponseField name="access_code"	type="string">
+Access code for conference call if available
+</ResponseField>
+
+<ResponseField name="webcast_url"	type="string (URL)">
+URL of webcast for conference call if avaliable
+</ResponseField>
+
+<ResponseField name="importance"	type="integer">
+`0` , `1` , `2` , `3` , `4` , `5` 	
+Subjective Basis of How Important Event is to Market. `5` = High
+</ResponseField>
+
+<ResponseField name="notes"	type="string">
+Additional notes provided by the Benzinga Newsdesk where applicable. Notes may include HTML.
+</ResponseField>
+
+<ResponseField name="updated"	type="integer (int64)">
+Last updated timestamp, UTC
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "date": "string (YYYY-MM-DD)",
+  "time": "string (HH:MM:SS)",
+  "name": "string",
+  "exchange": "string",
+  "ticker": "string",
+  "start_time": "string (HH:MM:SS)",
+  "phone_num": "string (NNN-NNN-NNNN)",
+  "international_num": "string (NNN-NNN-NNNN)",
+  "reservation_num": "string (NNN-NNN-NNNN)",
+  "access_code": "string",
+  "webcast_url": "string (URL)",
+  "importance": "integer",
+  "notes": "string",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>
+
+## calendar-removed:object
+
+<ResponseField name="id"	type="string">
+id of removed calendar content
+</ResponseField>
+
+<ResponseField name="type"	type="string">
+`ratings` , `earnings` , `guidance` , `ipo` , `offerings` , `economics` , `ma` , `splits` , `dividends` , `conference calls`	
+Calendar type of removed content
+</ResponseField>
+
+<ResponseField name="updated"	type="integer (int64)">
+UTC Unix epoch timestamp (seconds)
+</ResponseField>
+
+<Accordion title="Structure (JSON)">
+```JSON
+{
+  "id": "string",
+  "type": "string",
+  "updated": "integer (int64)"
+}
+```
+</Accordion>

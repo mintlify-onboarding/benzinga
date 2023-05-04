@@ -46,67 +46,67 @@ apiKey to be passed as token in query parameter.
 
 ### BenzigaStory:object
 
-<ParamField path = "id" type = "integer">
+<ResponseField name = "id" type = "integer">
 The unique identifier of the article. This identifier is also found in the path of url on benzinga.com.
-</ParamField>
+</ResponseField>
 
-<ParamField path = "author" type = "string">
+<ResponseField name = "author" type = "string">
 The author of the article. This could be a Benzinga journalist, news desk analyst or contributor on benzinga.com.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "created" type = "string">
+<ResponseField name = "created" type = "string">
 The moment the article is created. The time zone is Greenwich Mean Time (GMT) - 4:00, commonly know as Eastern Daylight Time (EDT). This time stamp will not change. The date format standard used is RFC 2822 / RFC 1123.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "updated" type = "object">
-</ParamField>
+<ResponseField name = "updated" type = "object">
+</ResponseField>
 
-<ParamField query = "title" type = "string"> 
+<ResponseField name = "title" type = "string"> 
 The headline of the article. This will only be plain text.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "teaser" type = "string">
+<ResponseField name = "teaser" type = "string">
 Depending on where the content is originated from (Benzinga.com or Benzinga Pro Terminal) the teaser functions in different ways. If the article is a full length article from Benzinga.com, where the body field is filled out, this will be the first sentence of the article up to 256 characters. If this is a Benzinga Pro headline, this will function like the body of an article and provide additional context to the headline, usually no more than a few paragraphs. This field can contain html and html encoded characters such as '&quot' etc.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "body" type = "string">
+<ResponseField name = "body" type = "string">
 The article content. This field can contain html and html encoded characters such as 'quot' etc.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "url" type = "string">
+<ResponseField name = "url" type = "string">
 The url where the article lives on Benzinga.com. If this is a pro headline, it will take the user to a shortened headline with a paywall to purchase the Benzinga Pro terminal, so use with caution.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "image" type = "object[]">
+<ResponseField name = "image" type = "object[]">
 The featured image related to the article, if applicable. Benzinga Pro headlines will not contain a featured image.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "image[].size" type= "string">
-</ParamField>
+<ResponseField name = "image[].size" type= "string">
+</ResponseField>
 
-<ParamField query = "image[].url" type = "string">
-</ParamField>
+<ResponseField name = "image[].url" type = "string">
+</ResponseField>
 
-<ParamField query = "channels" type = "string">
+<ResponseField name = "channels" type = "string">
 The topic(s) or categories that relate to the article. Channels can have sub-channels, but they will all be listed as their own item and not as a sub-level of the array. For Why is it Moving (WIIM) data, enter WIIM as channel.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "channels[].name" type = "string">
-</ParamField>
+<ResponseField name = "channels[].name" type = "string">
+</ResponseField>
 
-<ParamField query = "stocks" type = "object[]">
+<ResponseField name = "stocks" type = "object[]">
 The stock symbols that are listed within the article body. This will not display competitor symbols unless they are specifically referenced in the article.
-</ParamField>
+</ResponseField>
 
-<ParamField query = "stocks[].string" type = "string">
-</ParamField>
+<ResponseField name = "stocks[].string" type = "string">
+</ResponseField>
 
-<ParamField query = "tags" type = "object[]">
+<ResponseField name = "tags" type = "object[]">
 Additional tags that are not channels or categories, but are reoccuring themes including, but not limited to; analyst names, bills being talked about in Congress (Dodd-Frank), specific products (iPhone), politicians, celebrities, stock movements (i.e. 'Mid-day Losers' & 'Mid-day Gainers').
-</ParamField>
+</ResponseField>
 
-<ParamField query = "tags[].name" type = "string">
-</ParamField>
+<ResponseField name = "tags[].name" type = "string">
+</ResponseField>
 
 <Accordion title="Structure (JSON)">
 ```json
@@ -145,12 +145,12 @@ Additional tags that are not channels or categories, but are reoccuring themes i
 
 ### news-removed:object
 
-<ParamField path = "id" type = "integer">
+<ResponseField name = "id" type = "integer">
 id of removed news content
-</ParamField>
+</ResponseField>
 
-<ParamField query = "updated" type = "object">
-</ParamField>
+<ResponseField name = "updated" type = "object">
+</ResponseField>
 
 <Accordion title="Structure (JSON)">
 ```json

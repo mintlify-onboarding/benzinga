@@ -34,7 +34,37 @@
     },
     {
       "group": "Benzinga APIs", 
-      "pages": ["benzinga-apis/newsfeed-v2"]
+      "pages": [
+        "benzinga-apis/introduction",
+        {
+          "group": "Historical Bar Data",
+          "pages": [
+            "benzinga-apis/bars/bars-v2",
+            "benzinga-apis/bars/get-bars"
+          ]
+        },
+        {
+          "group": "Calendar",
+          "pages": [
+            "benzinga-apis/calendar/calendar-v2",
+            "benzinga-apis/calendar/models",
+            "benzinga-apis/calendar/get-conferenceCalls",
+            "benzinga-apis/calendar/get-dividends",
+            "benzinga-apis/calendar/get-earnings",
+            "benzinga-apis/calendar/get-economics",
+            "benzinga-apis/calendar/get-fda", 
+            "benzinga-apis/calendar/get-guidance", 
+            "benzinga-apis/calendar/get-ipos", 
+            "benzinga-apis/calendar/get-offerings", 
+            "benzinga-apis/calendar/get-ratings", 
+            "benzinga-apis/calendar/get-ma",
+            "benzinga-apis/calendar/get-splits",
+            "benzinga-apis/calendar/get-removed",
+            "benzinga-apis/calendar/get-analysts",
+            "benzinga-apis/calendar/get-firms"
+          ]
+        },
+        "benzinga-apis/newsfeed-v2"]
     },
     {
       "group": "API reference",
