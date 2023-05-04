@@ -15,7 +15,13 @@
     "url": "https://www.benzinga.com/apis/request-trial/?utm_source=Benzinga_Docs&utm_campaign=Free_Trial"
   },
   "api": {
-    "baseUrl": "https://api.benzinga.com/api/v2"
+    "baseUrl": [
+      "https://api.benzinga.com/api/v1",
+      "https://api.benzinga.com/api/v2",
+      "https://api.benzinga.com/api/v2.1",
+      "https://api.benzinga.io/v4.1/fxstreet"
+
+    ]
   },
   "anchors": [
     {
@@ -71,6 +77,42 @@
             "benzinga-apis/delayed-quote/delayed-quote-v1",
             "benzinga-apis/delayed-quote/models",
             "benzinga-apis/delayed-quote/get-quoteDelayed"
+          ]
+        },
+        {
+          "group":"Fundamentals v2.1",
+          "pages": [
+            "benzinga-apis/fundamentals/fundamentals-v2.1",
+            "benzinga-apis/fundamentals/get-fundamentals",
+            "benzinga-apis/fundamentals/get-valuationRatios",
+            "benzinga-apis/fundamentals/get-earningRatios", 
+            "benzinga-apis/fundamentals/get-operationRatios", 
+            "benzinga-apis/fundamentals/get-financials", 
+            "benzinga-apis/fundamentals/get-shareClass", 
+            "benzinga-apis/fundamentals/get-earningsReports", 
+            "benzinga-apis/fundamentals/get-alphaBeta",
+            "benzinga-apis/fundamentals/get-company", 
+            "benzinga-apis/fundamentals/get-companyProfile",
+            "benzinga-apis/fundamentals/get-shareClassProfile", 
+            "benzinga-apis/fundamentals/get-assetClassification"
+          ]
+        },
+        {
+          "group": "Fundamentals v2 (Deprecated)",
+          "pages":[
+            "benzinga-apis/fundamentals-deprecated/fundamentals-v2",
+            "benzinga-apis/fundamentals-deprecated/get-fundamentals",
+            "benzinga-apis/fundamentals-deprecated/get-valuationRatios", 
+            "benzinga-apis/fundamentals-deprecated/get-earningRatios", 
+            "benzinga-apis/fundamentals-deprecated/get-operationRatios", 
+            "benzinga-apis/fundamentals-deprecated/get-financials"
+          ]
+        },
+        {
+          "group": "Fxstreet Economic Calendar", 
+          "pages": [
+            "benzinga-apis/fxstreet-econ/fxstreet-econ-ref",
+            "benzinga-apis/fxstreet-econ/get-econ"
           ]
         },
         "benzinga-apis/newsfeed-v2"]

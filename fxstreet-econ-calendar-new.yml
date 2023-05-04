@@ -1,0 +1,363 @@
+swagger: "2.0"
+info:
+  version: "4.1.0"
+  title: Fxstreet Economic Calendar
+  description: macroeconomic data of the most revelant events
+host: api.benzinga.io
+basePath: /v4.1/fxstreet
+schemes:
+  - https
+security:
+  - tokenHeader: []
+  - tokenQuery: []
+paths:
+  /econ:
+    get:
+      summary: Get an array of event date objects
+      parameters:
+        - name: view
+          in: query
+          type: string
+          description: >-
+            Filter the returned data by specific time periods.
+
+            - current - Displays n events (parameter 'rows'), tacking m from the past (parameter 'pastevents'),
+            limited to k hours back (parameter 'hoursbefore').
+
+            - range - Displays events from a start date to a end
+
+            - day - Displays the events for the current day
+
+            - week - Displays the events for the current week
+
+            - month - Displays the events for the current day and the rest of the days in the current month. 
+
+          enum:
+            - current
+            - range
+            - day
+            - week
+            - month
+          required: false
+        - name: rows
+          in: query
+          type: integer
+          description: The number of rows to display. Only applicable for view=current
+          required: false
+        - name: pastevents
+          in: query
+          type: integer
+          description: The number of events from the past. Max 100. Only applicable for view=current. If hoursbefore is specified the events from the past will be limited to those within specified hours.
+        - name: hoursbefore
+          in: query
+          type: integer
+          description: When view=current hoursbefore limits the previousevents returned to within the specified hours.
+        - name: keyword
+          in: query
+          type: string
+          description: Keyword to filter results. Must be at least 3 characters long
+        - name: countrycode
+          in: query
+          type: string
+          format: csv
+          description: Filter results by specific countries. To filter by multiple, separate by comma  - US,FR,DE
+          enum:
+            - AU
+            - AT
+            - BE
+            - BR
+            - CA
+            - CL
+            - CN
+            - CO
+            - CZ
+            - DK
+            - EMU
+            - FI
+            - FR
+            - DE
+            - GR
+            - HK
+            - HU
+            - IS
+            - IN
+            - ID
+            - IE
+            - IT
+            - JP
+            - MX
+            - NL
+            - NZ
+            - NO
+            - PL
+            - PT
+            - RO
+            - RU
+            - SG
+            - SK
+            - ZA
+            - ES
+            - SE
+            - CH
+            - TR
+            - UK
+            - US
+        - name: categories
+          in: query
+          type: string
+          format: csv
+          description: >-
+            Limit the returned results to specific categories. To filter by multiple, separate by comma 
+            
+            - categories=c94405b5-5f85-4397-ab11-002a481c4b92,33303f5e-1e3c-4016-ab2d-ac87e98f57ca
+
+            - Central Banks - c94405b5-5f85-4397-ab11-002a481c4b92
+
+            - Consump. & Inflation - 33303f5e-1e3c-4016-ab2d-ac87e98f57ca
+
+            - Confidence Indice - se229c890-80fc-40f3-b6f4-b658f3a02635
+
+            - Employment - 91da97bd-d94a-4ce8-a02b-b96ee2944e4c
+
+            - Industrial & Non-Industrial Activity - 24127f3b-edce-4dc4-afdf-0b3bd8a964be
+
+            - Liquidity & Balance - fa6570f6-e494-4563-a363-00d0f2abec37
+
+            - Government - e9e957ec-2927-4a77-ae0c-f5e4b5807c16
+          enum:
+            - c94405b5-5f85-4397-ab11-002a481c4b92
+            - 33303f5e-1e3c-4016-ab2d-ac87e98f57ca
+            - se229c890-80fc-40f3-b6f4-b658f3a02635
+            - 91da97bd-d94a-4ce8-a02b-b96ee2944e4c
+            - 24127f3b-edce-4dc4-afdf-0b3bd8a964be
+            - fa6570f6-e494-4563-a363-00d0f2abec37
+            - e9e957ec-2927-4a77-ae0c-f5e4b5807c16
+        - name: timezone
+          in: query
+          type: string
+          format: Fiji+Standard+Time
+          description: >-
+            Find a list of possible values here - http://calendar.fxstreet.com/country/GetTimeZones?v=2&f=json
+            Use the FXSstandardName value
+
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/EventDate"
+
+securityDefinitions:
+  tokenQuery:
+    type: apiKey
+    name: apike
+    in: query
+    description: include key in either query or header
+  tokenHeader:
+    type: apiKey
+    name: apikey
+    in: header
+    description: include key in either query or header
+
+definitions:
+  EventDate:
+    type: object
+    properties:
+      Event:
+        type: object
+        properties:
+          Id:
+            type: string
+            description: >-
+              The event ID - This is a unique identifier for all instances of an event.
+              For example, if the event is yearly, the eventdate row for next year's event will
+              match the event ID of this year's event, but the eventdate IDs will differ.
+          DateUtc:
+            type: string
+            format: ISO date
+            description: >-
+              UTC date/time of the eventdate. For example, if the event is the announcment
+              of economic numbers, this is the date/time that the numbers are announced
+          Name:
+            type: string
+            description: The name of the eventdate
+          Description:
+            type: string
+            description: This field seems to always be null 
+          HTMLDescription:
+            type: string
+            description: >-
+              Description of the event. This field includes HTML markup tags
+          CuntryID:
+            type: string
+            description: >-
+              The unique ID of the country for the eventdate
+          InternationalCountryCode:
+            type: string
+            description: >-
+              The short country code of the country for the eventdate
+            enum:
+              - AU
+              - AT
+              - BE
+              - BR
+              - CA
+              - CL
+              - CN
+              - CO
+              - CZ
+              - DK
+              - EMU
+              - FI
+              - FR
+              - DE
+              - GR
+              - HK
+              - HU
+              - IS
+              - IN
+              - ID
+              - IE
+              - IT
+              - JP
+              - MX
+              - NL
+              - NZ
+              - NO
+              - PL
+              - PT
+              - RO
+              - RU
+              - SG
+              - SK
+              - ZA
+              - ES
+              - SE
+              - CH
+              - TR
+              - UK
+              - US
+          CountryName:
+            type: string
+            description: >-
+              The name of the country for the eventdate
+          EventTypeID:
+            type: string
+            description: >-
+              The unique ID of the category for the eventdate
+
+              - Central Banks - c94405b5-5f85-4397-ab11-002a481c4b92
+              - Consump. & Inflation - 33303f5e-1e3c-4016-ab2d-ac87e98f57ca
+              - Confidence Indice - se229c890-80fc-40f3-b6f4-b658f3a02635
+              - Employment - 91da97bd-d94a-4ce8-a02b-b96ee2944e4c
+              - Industrial & Non-Industrial Activity - 24127f3b-edce-4dc4-afdf-0b3bd8a964be
+              - Liquidity & Balance - fa6570f6-e494-4563-a363-00d0f2abec37
+              - Government - e9e957ec-2927-4a77-ae0c-f5e4b5807c16
+            enum:
+              - c94405b5-5f85-4397-ab11-002a481c4b92
+              - 33303f5e-1e3c-4016-ab2d-ac87e98f57ca
+              - se229c890-80fc-40f3-b6f4-b658f3a02635
+              - 91da97bd-d94a-4ce8-a02b-b96ee2944e4c
+              - 24127f3b-edce-4dc4-afdf-0b3bd8a964be
+              - fa6570f6-e494-4563-a363-00d0f2abec37
+              - e9e957ec-2927-4a77-ae0c-f5e4b5807c16
+          EventTypeDescription:
+            type: string
+            description: >-
+              The name of the category of the eventdate
+          Potency:
+            type: number
+            description: The number associated to PotencySymbol. Importance of event.
+          PotencySymbol:
+            type: string
+            description: Potency Symbol
+          CurrencyId:
+            type: string
+            description: The abbreviated currency code like that used in currency pairs
+          CurrencySymbol:
+            type: string
+            description: The symbol used for the currency. For example, $ for USD.
+          Symbol:
+            type: string
+            description: The units of the economic numbers reported in the fields Actual, Consensus, and Previous
+          IsSpeech:
+            type: boolean
+            description: True if event is a speech.
+          IsReport:
+            type: boolean
+            description: True if event is a report.
+          RiseType:
+            type: string
+            description: >-
+              Rise type - Positive, Negative or Neuteral. Used to calculate IsBetterThanExpected.
+              If RiseType is positive, and the actual is higher than the consensus, IsBetterThanExpected will be true.
+      Id:
+        type: string
+        description: >-
+          Unique ID of the eventdate.
+          An eventdae is the single specific occurance in time of an event.
+      DateUtc:
+        type: string
+        format: ISO Date
+        description: >-
+          The date/time that the eventdate occurs.
+          For example, if the event is an announcment of economic numbers,
+          this is the date/time that the numbers are announced.
+      Comments:
+        type: string
+        description: comments
+      IsPreliminary:
+        type: boolean
+        description: True if the eventdate is preliminary
+      PeriodType:
+        type: string
+        description: >-
+          The period type. For example, PeriodType will be `Q` if the event is an announcment of quarterly numbers.
+      ForPeriod:
+        type: string
+        format: ISO Date
+        description: >-
+          The date/time that the eventdate is reguarding. For example, if it is an announcment of numbers from Q1,
+          this field will be `2017-03-31T00:00:00Z`
+      Volatility:
+        type: integer
+        description: Volitility for the eventdate
+      Consensus:
+        type: number
+        description: Consensus estimate of numbers to be announced at eventdate
+      HasRelatedContent:
+        type: boolean
+        description: True if the eventdate has related content
+      Previous:
+        type: number
+        description: Value of the numbers previously announced at same event
+      Revised:
+        type: number
+        description: Revised numbers for the eventdate if applicable
+      IsTentative:
+        type: boolean
+        description: True if the eventdate is tentative
+      IsAllDay:
+        type: boolean
+        description: True if the eventdate lasts all day
+      IsBetterThanExpected:
+        type: boolean
+        description: True if the numbers announced are better than expected
+      HasNews:
+        type: boolean
+        description: True if the eventdate has news
+      HasRelateds:
+        type: boolean
+        description: True if the eventdate has relateds
+      HasHistory:
+        type: boolean
+        description: True if the eventdate has history
+      UrlSource:
+        type: string
+        description: The URL source of the eventdate if applicable
+      CreateDateUtc:
+        type: string
+        format: ISO Date
+        description: The date/time that the eventdate was created in FXstreet's system
+            
