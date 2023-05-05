@@ -17,10 +17,15 @@
   "api": {
     "baseUrl": [
       "https://api.benzinga.com/api/v1",
+      "https://api.benzinga.com/api/v1.1",
+      "https://api.benzinga.com/api/v1/gov/usa/congress",
+      "https://api.benzinga.com/api/v1/market",
+      "wss://api.benzinga.com/api/v1/news",
       "https://api.benzinga.com/api/v2",
+      "https://jwtapi.benzinga.com/api/v2/logos",
+      "https://api.benzinga.com/api/v2/logos",
       "https://api.benzinga.com/api/v2.1",
       "https://api.benzinga.io/v4.1/fxstreet"
-
     ]
   },
   "anchors": [
@@ -46,7 +51,6 @@
           "group": "Historical Bar Data",
           "pages": [
             "benzinga-apis/bars/bars-v2",
-            "benzinga-apis/bars/models",
             "benzinga-apis/bars/get-bars"
           ]
         },
@@ -54,7 +58,6 @@
           "group": "Calendar",
           "pages": [
             "benzinga-apis/calendar/calendar-v2",
-            "benzinga-apis/calendar/models",
             "benzinga-apis/calendar/get-conferenceCalls",
             "benzinga-apis/calendar/get-dividends",
             "benzinga-apis/calendar/get-earnings",
@@ -75,7 +78,6 @@
           "group": "Delayed Quote", 
           "pages": [
             "benzinga-apis/delayed-quote/delayed-quote-v1",
-            "benzinga-apis/delayed-quote/models",
             "benzinga-apis/delayed-quote/get-quoteDelayed"
           ]
         },
@@ -113,6 +115,56 @@
           "pages": [
             "benzinga-apis/fxstreet-econ/fxstreet-econ-ref",
             "benzinga-apis/fxstreet-econ/get-econ"
+          ]
+        },
+        {
+          "group": "Government Trades",
+          "pages": [
+            "benzinga-apis/government-trades/gov-trades-ref",
+            "benzinga-apis/government-trades/get-trades"
+          ]
+        },
+        {
+          "group": "Corporate Logos v1.1",
+          "pages": [
+            "benzinga-apis/corporate-logos-v1/corporate-logos-ref",
+            "benzinga-apis/corporate-logos-v1/get-logos"
+          ]
+        },
+        {
+          "group": "Corporate Logos v2.0 JWT",
+          "pages": [
+            "benzinga-apis/corporate-logos-v2.0JWT/corporate-logos-ref",
+            "benzinga-apis/corporate-logos-v2.0JWT/get-search", 
+            "benzinga-apis/corporate-logos-v2.0JWT/get-sync"
+          ]
+        },
+        {
+          "group": "Corporate Logos v2.0", 
+          "pages": [
+            "benzinga-apis/corporate-logos-v2/corporate-logos-ref",
+            "benzinga-apis/corporate-logos-v2/get-search",
+            "benzinga-apis/corporate-logos-v2/get-sync"
+          ]
+        },
+        {
+          "group": "Movers",
+          "pages": [
+            "benzinga-apis/movers/movers-v1",
+            "benzinga-apis/movers/get-movers"
+          ]
+        },
+        {
+          "group": "Newsfeed (Streaming) v1",
+          "pages": [
+            "benzinga-apis/newsfeed-stream-v1/newsfeed-stream-v1",
+            "benzinga-apis/newsfeed-stream-v1/get-stream"
+          ]
+        },
+        {
+          "group": "TCP Newsfeed v1.1 (Deprecated)",
+          "pages": [
+            "benzinga-apis/tcp-newsfeed/newsfeed-tcp-v1-1"
           ]
         },
         "benzinga-apis/newsfeed-v2"]
