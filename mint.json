@@ -17,13 +17,15 @@
   "api": {
     "baseUrl": [
       "https://api.benzinga.com/api/v1",
-      "https://api.benzinga.com/api/v1.1",
+      "https://api.benzinga.com/api/v1/sec",
       "https://api.benzinga.com/api/v1/gov/usa/congress",
       "https://api.benzinga.com/api/v1/market",
-      "wss://api.benzinga.com/api/v1/news",
+      "wss://api.benzinga.com/api/v1/news", 
+      "https://api.benzinga.com/api/v1.1", 
       "https://api.benzinga.com/api/v2",
       "https://jwtapi.benzinga.com/api/v2/logos",
       "https://api.benzinga.com/api/v2/logos",
+      "https://jwtapi.benzinga.com/api/v2",
       "https://api.benzinga.com/api/v2.1",
       "https://api.benzinga.io/v4.1/fxstreet"
     ]
@@ -161,23 +163,52 @@
             "benzinga-apis/newsfeed-stream-v1/get-stream"
           ]
         },
+        "benzinga-apis/newsfeed-tcp-v1-1",
         {
-          "group": "TCP Newsfeed v1.1 (Deprecated)",
+          "group": "Newsfeed & Why is it Moving v2 JWT",
           "pages": [
-            "benzinga-apis/tcp-newsfeed/newsfeed-tcp-v1-1"
+            "benzinga-apis/newsfeed-v2-jwt/newsfeed-v2-ref",
+            "benzinga-apis/newsfeed-v2-jwt/get-news",
+            "benzinga-apis/newsfeed-v2-jwt/get-news-removed"
           ]
         },
-        "benzinga-apis/newsfeed-v2"]
-    },
-    {
-      "group": "API reference",
-      "pages": [
         {
-          "group": "News",
+          "group": "Newsfeed & Why is it Moving v2",
           "pages": [
-            "api-reference/news/newsService-get",
-            "api-reference/news/newsServiceRemoved-get"
-            
+            "benzinga-apis/newsfeed-v2/newsfeed-v2",
+            "benzinga-apis/newsfeed-v2/newsService-get",
+            "benzinga-apis/newsfeed-v2/newsServiceRemoved-get"
+          ]
+        },
+        {
+          "group": "SEC Filings", 
+          "pages": [
+            "benzinga-apis/sec-filings/sec-filings-ref",
+            "benzinga-apis/sec-filings/get-insider-filings"
+          ]
+        },
+        {
+          "group": "Signals",
+          "pages": [
+            "benzinga-apis/signals/signals-ref",
+            "benzinga-apis/signals/get-options-activity"
+          ]
+        },
+        "benzinga-apis/squawk-v3",
+        "benzinga-apis/squawk-v4",
+        {
+          "group": "Webhook v1 Test Trigger",
+          "pages": [
+            "benzinga-apis/test-trigger-webhook/webhook-v1-ref",
+            "benzinga-apis/test-trigger-webhook/get-webhook-test"
+          ]
+        },
+        "benzinga-apis/webhook-v1",
+        {
+          "group": "WIIMs",
+          "pages": [
+            "benzinga-apis/wiims/wiims-ref",
+            "benzinga-apis/wiims/get-wiims"
           ]
         }
       ]
