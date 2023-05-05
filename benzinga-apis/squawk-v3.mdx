@@ -35,7 +35,7 @@ Squawk is built on top of WebRTC. So one can connect to it through WebRTC suppor
 - [Create peer connections](#create-peer-connections)
 - [Send ICE Candidate to peers](#send-ice-candidate-to-peers)
 - [Message Types](#message-types)
-- [Ping/Pong mechanism to keep alive the Web Socket](#pingpong-mechanism-to-keep-alive-the-web-socket)
+- [Ping/Pong mechanism to keep alive the Web Socket](#ping-pong-mechanism-to-keep-alive-the-web-socket)
 - [Logout](#logout)
 
 ### Create a socket connection
@@ -64,7 +64,7 @@ Once the socket connection is created, authenticate with your `apikey`.
 ```
 **Note:** If you do not yet have an API key (apikey), please get in touch with the Benzinga licensing team. This is a one-time process. Save this API key securely.
 
-### Using JWT
+**Using JWT**
 Benzinga APIs support asymmetric JWT (JSON Web Token) for authentication.
 
 To authenticate using JWT, send the token in query parameter when you open the WebSocket connection. Pseudo-code for connecting (and authenticating) would be as below:
@@ -165,7 +165,7 @@ Response:
 }
 ```
 
-### Notifications from server
+**Notifications from server**
 
 Add a handler for the following message/notification types, which will be sent by squawk server.
 
@@ -244,10 +244,10 @@ Send the logout message when you want to stop listening or your container applic
 
 Squawk also supports RTP streaming, which can be useful if you are looking to re-broadcast from your media server or for any other RTP specific purpose. One can connect to squawk RTP by implementing the following mechanism.
 
-- [Create a socket connection](#create-a-socket-connection)
-- [Authenticate](#authenticate)
+- [Create a socket connection](#create-a-socket-connection-2)
+- [Authenticate](#authenticate-2)
 - [SDP negotiation](#sdp-negotiation)
-- [Logout](#logout)
+- [Logout](#logout-2)
 - [Media Override Notification](#media-override-notification)
 - [Ping/Pong mechanism](#pingpong-mechanism)
 
@@ -263,7 +263,7 @@ wss://squawk.benzinga.com/rtp
 ### Authenticate
 At the moment squawk supports only API key authentication for RTP.
 
-### Using API key
+**Using API key**
 Once the socket connection is created, authenticate with your `apikey`.
 ```JSON
 {
@@ -282,7 +282,7 @@ Response:
 ```
 **Note:** Please get in touch with the Benzinga licensing team for acquiring apiKey. This is a one-time process. Save this API key securely.
 
-### Join Room
+**Join Room**
 Once authenticated, send the join room request/message. The room name for benzinga broadcasts is `PRO`. Sample join room request format:
 ```JSON
 {
@@ -379,7 +379,7 @@ Indicates that the presenter/broadcaster has left and streaming stopped. So shou
 }
 ```
 
-- **mediaOverride**:
+### mediaOverride
 
 This is the notification that will be sent from Squawk to WebSocket client in a case where you logged in from another session (somewhere else) using the same API key.
 
