@@ -1,4 +1,5 @@
 {
+  "$schema": "https://mintlify.com/schema.json",
   "name": "Benzinga",
   "logo": {
     "dark": "/logo/dark.svg",
@@ -13,6 +14,12 @@
   "modeToggle": {
     "default": "light"
   },
+  "topbarLinks": [
+    {
+      "name": "Learn More",
+      "url": "https://www.benzinga.com/apis"
+    }
+  ],
   "topbarCtaButton": {
     "name": "Get Started",
     "url": "https://www.benzinga.com/apis/data"
