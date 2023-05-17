@@ -1,18 +1,21 @@
 {
   "name": "Benzinga",
   "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#008FD9",
-    "light": "#59C1f8",
-    "dark": "#036192"
+    "primary": "#093451",
+    "light": "#5489C4",
+    "dark": "#093451"
+  },
+  "modeToggle": {
+    "default": "light"
   },
   "topbarCtaButton": {
-    "name": "Free Trial",
-    "url": "https://www.benzinga.com/apis/request-trial/?utm_source=Benzinga_Docs&utm_campaign=Free_Trial"
+    "name": "Get Started",
+    "url": "https://www.benzinga.com/apis/data"
   },
   "api": {
     "baseUrl": [
@@ -32,9 +35,29 @@
   },
   "anchors": [
     {
-      "name": "Github", 
-      "icon": "github",
-      "url": "https://github.com/benzinga"
+      "name": "API Suite", 
+      "icon": "list",
+      "url": "https://www.benzinga.com/apis/data"
+    },
+    {
+      "name": "New Features", 
+      "icon": "sparkles",
+      "url": "https://www.benzinga.com/apis/new-features"
+    },
+    {
+      "name": "Advertising", 
+      "icon": "megaphone",
+      "url": "https://www.benzinga.com/apis/advertising/"
+    },
+    {
+      "name": "Blog", 
+      "icon": "newspaper",
+      "url": "https://www.benzinga.com/apis/blog/"
+    },
+    {
+      "name": "Contact Us", 
+      "icon": "envelope",
+      "url": "mailto:licensing@benzinga.com"
     }
   ],
   "navigation": [
